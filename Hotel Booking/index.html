@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Book My Room</title>
+  </head>
+  <body>
+    <div class="title__logo">
+      <h1>Book My Room</h1>
+    </div>
+    <div class="hotel__body">
+      <input
+        class="search__bar"
+        type="text"
+        name="Search"
+        id="Search"
+        onkeyup="myFunction()"
+        placeholder="&#x1F50E;  Search for Hotel"
+      />
+      <div class="hotels" id="hotels">
+        <a href="./ROYALFORT.html">
+          <div class="hotel__card" id="ROYALFORT">
+            <img
+              src="https://source.unsplash.com/random/350x350/?hotel room"
+              alt="Hotel"
+            />
+            <div>
+              <h4>Royal Fort</h4>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+        </a>
+        <div class="hotel__card" id="NAKSHATRA">
+          <img
+            src="https://source.unsplash.com/random/350x350/?hotelroom"
+            alt="Hotel"
+          />
+          <div>
+            <h4>Nakshatra</h4>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+        </div>
+        <div class="hotel__card" id="ALLUMGOKULAMPARK">
+          <img
+            src="https://source.unsplash.com/random/350x350/?hotel"
+            alt="Hotel"
+          />
+          <div>
+            <h4>ALLUM GOKULAM PARK</h4>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+        <div class="hotel__card" id="HOTALBALAREGENCY">
+          <img
+            src="https://source.unsplash.com/random/350x350/?hotels"
+            alt="Hotel"
+          />
+          <div>
+            <h4>Hotel Bala Regency</h4>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var hotelList = [
+        "Royal Fort",
+        "Nakshatra",
+        "ALLUM GOKULAM PARK",
+        "Hotel Bala Regency",
+      ];
+      var key = [
+        "ROYALFORT",
+        "NAKSHATRA",
+        "ALLUMGOKULAMPARK",
+        "HOTALBALAREGENCY",
+      ];
+      function myFunction() {
+        search = document.getElementById("Search").value.toUpperCase();
+        for (i = 0; i < hotelList.length; i++) {
+          if (hotelList[i].toUpperCase().indexOf(search) > -1) {
+            document.getElementById(key[i]).style.display = "block";
+          } else {
+            document.getElementById(key[i]).style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
